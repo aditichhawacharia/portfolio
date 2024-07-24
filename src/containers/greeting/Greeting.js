@@ -32,7 +32,7 @@ export default function Greeting() {
                 <Button text="Contact me" href="#contact" />
                 {greeting.resumeLink && (
                   <a
-                    href="https://drive.google.com/file/d/1qbQgbjR0n-glPjV3ruzsQbecHP3Fcrm5/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1fL2mToAouXGLwRpqehj1ey-sc13Dhffy/view?usp=sharing"
                     style={{ textDecoration: "none" }}
                     target="_blank"
                     rel="noopener noreferrer"

@@ -278,7 +278,7 @@ const achievementSection = {
     },
     {
       title: "T20 World Cup Intern/Volunteer",
-      subtitle: "Was selected to take part in the development of the T20 Cricket World Cup Matches in Dallas. Spent 6+ hours training, 30+ hours volunteering, as a token of hardwork, got to see USA vs Canada, USA vs Pakistan, Bangladesh vs Srilanka without any cost.",
+      subtitle: "Was selected to take part in the development of the T20 Cricket World Cup Matches in Dallas. Spent 6+ hours training, 30+ hours volunteering, as a token of hardwork, got to see USA vs Canada, USA vs Pakistan, Bangladesh vs Srilanka.",
       image: require("./assets/images/t20.png"),
       imageAlt: "ICC Logo",
       footerLink: [
