@@ -109,7 +109,7 @@ const educationInfo = {
   schools: [
     {
       schoolName: "Walnut Grove High School",
-      logo: require("./assets/images/wghs.jpg"),
+      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqfaRsio9nN7qM62jUHUVPydAKdDzvCmkVAg&s",
       subHeader: "High School Diploma",
       duration: "Aug 2023-May 2026",
       desc: "Grade 11",
@@ -147,7 +147,7 @@ const workExperiences = {
     {
       role: "Software Engineering Fellow",
       company: "Headstarter AI",
-      companylogo: require("./assets/images/headstarter.jpg"),
+      companylogo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzkUdlMvs2RawuH6V3YyKb9mrPFaPGbHqO3Q&s",
       date: "July 2024 – Present",
       descBullets: [
         "Building 5+ AI Apps and APIs using Nextjs, OpenAI, Pinecone, StripeAPI with 98% accuracy as seen by 1000 users",
