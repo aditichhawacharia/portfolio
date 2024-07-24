@@ -48,6 +48,8 @@
 .header li a:hover,
 .header .menu-btn:hover {
   background-color: $headerHoverBG;
+  padding: 10px 15px; /* Adjust these values as needed */
+
 }
 
 .header .logo {

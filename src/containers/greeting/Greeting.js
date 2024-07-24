@@ -1,39 +1,30 @@
-import React, {useContext} from "react";
-import {Fade} from "react-reveal";
+import React, { useContext } from "react";
+import { Fade } from "react-reveal";
 import emoji from "react-easy-emoji";
 import "./Greeting.scss";
 import landingPerson from "../../assets/lottie/landingPerson";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
-import {illustration, greeting} from "../../portfolio";
+import { illustration, greeting } from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function Greeting() {
-  const {isDark} = useContext(StyleContext);
+  const { isDark } = useContext(StyleContext);
   if (!greeting.displayGreeting) {
     return null;
   }
   return (
     <Fade bottom duration={1000} distance="40px">
       <div className="greet-main" id="greeting">
-        <div className="greeting-main">
-          <div className="greeting-text-div">
+        <div className="greeting-main" style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center" }}>
+          <div className="greeting-text-div" style={{ flex: 1 }}>
             <div>
-              <h1
-                className={isDark ? "dark-mode greeting-text" : "greeting-text"}
-              >
-                {" "}
-                {greeting.title}{" "}
+              <h1 className={isDark ? "dark-mode greeting-text" : "greeting-text"}>
+                {greeting.title}
                 <span className="wave-emoji">{emoji("👋")}</span>
               </h1>
-              <p
-                className={
-                  isDark
-                    ? "dark-mode greeting-text-p"
-                    : "greeting-text-p subTitle"
-                }
-              >
+              <p className={isDark ? "dark-mode greeting-text-p" : "greeting-text-p subTitle"}>
                 {greeting.subTitle}
               </p>
               <SocialMedia />
@@ -41,25 +32,28 @@ export default function Greeting() {
                 <Button text="Contact me" href="#contact" />
                 {greeting.resumeLink && (
                   <a
-                    href={require("./resume.pdf")}
-                    download="Resume.pdf"
-                    className="download-link-button"
+                    href="https://drive.google.com/file/d/1qbQgbjR0n-glPjV3ruzsQbecHP3Fcrm5/view?usp=sharing"
+                    style={{ textDecoration: "none" }}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <Button text="Download my resume" />
+                    <Button text="View my resume" />
                   </a>
                 )}
               </div>
             </div>
           </div>
-          <div className="greeting-image-div">
-            {illustration.animated ? (
-              <DisplayLottie animationData={landingPerson} />
-            ) : (
-              <img
-                alt="man sitting on table"
-                src={require("../../assets/images/manOnTable.svg")}
-              ></img>
-            )}
+          <div className="greeting-image-div" style={{ flex: 1, display: "flex", justifyContent: "center", alignItems: "center", marginTop: "2rem", marginLeft: "2rem" }}>
+            <img
+              alt="picture of me"
+              src={require("../../assets/images/icon.png")}
+              style={{
+                width: "25rem", // Adjust the size as needed
+                height: "25rem", // Ensure height matches width for a circle
+                borderRadius: "50%", // Makes the image circular
+                objectFit: "cover", // Ensures the image covers the circle
+              }}
+            />
           </div>
         </div>
       </div>

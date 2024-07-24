@@ -20,43 +20,37 @@ const illustration = {
 };
 
 const greeting = {
-  username: "Saad Pasta",
-  title: "Hi all, I'm Saad",
+  username: "Aditi Chhawacharia",
+  title: "Hi, I'm Aditi",
   subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks."
+    "High school junior interested in Computer Science, AI, & Entrepreneurship 🚀"
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
+    "empty", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
 // Social Media Links
 
 const socialMediaLinks = {
-  github: "https://github.com/saadpasta",
-  linkedin: "https://www.linkedin.com/in/saadpasta/",
-  gmail: "saadpasta70@gmail.com",
-  gitlab: "https://gitlab.com/saadpasta",
-  facebook: "https://www.facebook.com/saad.pasta7",
-  medium: "https://medium.com/@saadpasta",
-  stackoverflow: "https://stackoverflow.com/users/10422806/saad-pasta",
+  linkedin: "https://www.linkedin.com/in/aditi-chhawacharia/",
+  gmail: "chhawacharia.aditi@gmail.com",
   // Instagram, Twitter and Kaggle are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
   display: true // Set true to display this section, defaults to false
 };
 
 // Skills Section
-
 const skillsSection = {
   title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  subTitle: "Programmer. Innovator. Content Creator",
   skills: [
     emoji(
-      "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
+      "⚡ Skilled in Java, Python, JavaScript, HTML, CSS. Experience with complex problem-solving and developing innovative solutions."
     ),
-    emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
+    emoji("⚡ Experience in video editing, marketing strategies, audience engagement and creating engaging content across platforms."),
     emoji(
-      "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
+      "⚡Passionate about building new ventures and exploring entrepreneurial opportunities."
     )
   ],
 
@@ -73,84 +67,61 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fab fa-css3-alt"
     },
     {
-      skillName: "sass",
-      fontAwesomeClassname: "fab fa-sass"
-    },
-    {
       skillName: "JavaScript",
       fontAwesomeClassname: "fab fa-js"
     },
-    {
-      skillName: "reactjs",
-      fontAwesomeClassname: "fab fa-react"
-    },
-    {
-      skillName: "nodejs",
-      fontAwesomeClassname: "fab fa-node"
-    },
-    {
-      skillName: "swift",
-      fontAwesomeClassname: "fab fa-swift"
-    },
-    {
-      skillName: "npm",
-      fontAwesomeClassname: "fab fa-npm"
-    },
-    {
-      skillName: "sql-database",
-      fontAwesomeClassname: "fas fa-database"
-    },
-    {
-      skillName: "aws",
-      fontAwesomeClassname: "fab fa-aws"
-    },
-    {
-      skillName: "firebase",
-      fontAwesomeClassname: "fas fa-fire"
-    },
+   //{
+    //  skillName: "sql-database",
+    //  fontAwesomeClassname: "fas fa-database"
+    //},
     {
       skillName: "python",
       fontAwesomeClassname: "fab fa-python"
     },
     {
-      skillName: "docker",
-      fontAwesomeClassname: "fab fa-docker"
+      skillName:"java",
+      fontAwesomeClassname:"fab fa-java"
+    },
+    {
+      skillName:"leadership",
+      fontAwesomeClassname:"fas fa-users"
+    },
+    {
+      skillName:"marketing",
+      fontAwesomeClassname:"fas fa-chart-line"
+    },
+    {
+      skillName:"entrepreneurship",
+      fontAwesomeClassname:"fas fa-lightbulb"
+    },
+    {
+      skillName: "content creation",
+      fontAwesomeClassname: "fab fa-youtube"
     }
+
   ],
   display: true // Set false to hide this section, defaults to true
 };
-
 // Education Section
 
 const educationInfo = {
   display: true, // Set false to hide this section, defaults to true
   schools: [
     {
-      schoolName: "Harvard University",
-      logo: require("./assets/images/harvardLogo.png"),
-      subHeader: "Master of Science in Computer Science",
-      duration: "September 2017 - April 2019",
-      desc: "Participated in the research of XXX and published 3 papers.",
-      descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      ]
-    },
-    {
-      schoolName: "Stanford University",
-      logo: require("./assets/images/stanfordLogo.png"),
-      subHeader: "Bachelor of Science in Computer Science",
-      duration: "September 2013 - April 2017",
-      desc: "Ranked top 10% in the program. Took courses about Software Engineering, Web Security, Operating Systems, ...",
-      descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
+      schoolName: "Walnut Grove High School",
+      logo: require("./assets/images/wghs.jpg"),
+      subHeader: "High School Diploma",
+      duration: "Aug 2023-May 2026",
+      desc: "Grade 11",
+      descBullets:["Notable Coursework: AP Computer Science A(5), AP Calculus AB(4), AP Calculus BC, Computer Science 3",
+         "President of Girls Who Code WG Chapter, VP of French National Honor Society"]
     }
   ]
 };
-
 // Your top 3 proficient stacks/tech experience
 
 const techStack = {
-  viewSkillBars: true, //Set it to true to show Proficiency Section
+  viewSkillBars: false, //Set it to true to show Proficiency Section
   experience: [
     {
       Stack: "Frontend/Design", //Insert stack or technology you have experience in
@@ -174,29 +145,34 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Software Engineer",
-      company: "Facebook",
-      companylogo: require("./assets/images/facebookLogo.png"),
-      date: "June 2018 – Present",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      role: "Software Engineering Fellow",
+      company: "Headstarter AI",
+      companylogo: require("./assets/images/headstarter.jpg"),
+      date: "July 2024 – Present",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "Building 5+ AI Apps and APIs using Nextjs, OpenAI, Pinecone, StripeAPI with 98% accuracy as seen by 1000 users",
+        "Developing projects from design to deployment leading 4+ engineering fellows using MVC design patterns",
+        "Coaching by Amazon, Bloomberg and Capital One engineers on Agile, CI/CD, Git and microservice patterns"
       ]
     },
     {
-      role: "Front-End Developer",
-      company: "Quora",
-      companylogo: require("./assets/images/quoraLogo.png"),
-      date: "May 2017 – May 2018",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      role: "Founder, Chief Executive Officer, Tech Instructor & Director",
+      company: "TechFirst",
+      companylogo: require("./assets/images/logo5.png"),
+      date: "May 2024 – Present",
+      desc: "TechFirst is an organization providing virtual coding bootcamps (breaking down high level concepts) promoting tech exposure and skills to youth worldwide.",
+      descBullets: [
+        "Have reached several members of our community through Python Bootcamps and more", 
+        "Lead Instructor and Curriculum Developer, teaching kids through 3 hour classes with Classworks, Homework, Quizzes, and Lecture Notes",
+      ]
     },
     {
-      role: "Software Engineer Intern",
-      company: "Airbnb",
-      companylogo: require("./assets/images/airbnbLogo.png"),
-      date: "Jan 2015 – Sep 2015",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      role: "Co-Founder and Chief Technology Officer",
+      company: "Operation Nexus",
+      companylogo: require("./assets/images/op2.jpg"),
+      date: "November 2023 – Present",
+      desc: "International Marketing and Web Development Agency.",
+      descBullets:["Operation Nexus has experience with 35+ clients, reached 60K+ accounts, 150K+ media impressions", "Co-leads an cabinet of 13+ professionals","Holds oversight of all technological aspects within the agency"]
     }
   ]
 };
@@ -213,28 +189,28 @@ const openSource = {
 
 const bigProjects = {
   title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  subtitle: "SOME STARTUPS AND COMPANIES I WORKED ON",
   projects: [
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Saayahealth",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: require("./assets/images/3ftl.jpg"),
+      projectName: "3FTL",
+      projectDesc: "Solely designed and developed 3FTL's website. 3FTL is a mental health service for first-responders.",
       footerLink: [
         {
           name: "Visit Website",
-          url: "http://saayahealth.com/"
+          url: "https://3ftl.com/"
         }
         //  you can add extra buttons here.
       ]
     },
     {
-      image: require("./assets/images/nextuLogo.webp"),
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: require("./assets/images/stealth.jpg"),
+      projectName: "Stealth Startup",
+      projectDesc: "CEO and Founder of E-commerce business, reaching 1K+ people",
       footerLink: [
         {
-          name: "Visit Website",
-          url: "http://nextu.se/"
+          name: "Contact me for Details",
+          url: "https://www.linkedin.com/in/aditi-chhawacharia/"
         }
       ]
     }
@@ -252,51 +228,61 @@ const achievementSection = {
 
   achievementsCards: [
     {
-      title: "Google Code-In Finalist",
+      title: "Python Certified",
       subtitle:
-        "First Pakistani to be selected as Google Code-in Finalist from 4000 students from 77 different countries.",
-      image: require("./assets/images/codeInLogo.webp"),
+        "Certified through University of Michigan (T10 CS University)'s Python specialization, a course so rigorous, that it is on the pathway to earn a Masters of Data Science. Covers fundamental concepts of Python including DSA, Networked APIs, Interfaces, Accessing Web Data and Databases",
+      image: require("./assets/images/umich.png"),
       imageAlt: "Google Code-In Logo",
       footerLink: [
         {
           name: "Certification",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dYkVvNjdNWjNybWJrbndFSHpNY2NFV1p4YmU0/view?usp=sharing"
-        },
-        {
-          name: "Award Letter",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dekxBTW5hQkg2WXUyR3QzQmR0VERiLXlGRVdF/view?usp=sharing"
-        },
-        {
-          name: "Google Code-in Blog",
-          url: "https://opensource.googleblog.com/2019/01/google-code-in-2018-winners.html"
+          url: "https://drive.google.com/file/d/1XvXhpRXKGhHGSb81akQ_sSRACAhjmsmZ/view"
         }
       ]
     },
     {
-      title: "Google Assistant Action",
+      title: "IBM AI Professional Developer",
       subtitle:
-        "Developed a Google Assistant Action JavaScript Guru that is available on 2 Billion devices world wide.",
-      image: require("./assets/images/googleAssistantLogo.webp"),
-      imageAlt: "Google Assistant Action Logo",
+        "Certified through IBM's AI Professional Developer Specialization. Learnt the fundamental concepts, key terms, building blocks, and applications of AI, how to use Python and Flask to develop and deploy AI applications on the web, and how to build generative AI-powered apps and chatbots using various frameworks and technologies.",
+      image: require("./assets/images/ibm.png"),
+      imageAlt: "IBM Logo",
       footerLink: [
         {
-          name: "View Google Assistant Action",
-          url: "https://assistant.google.com/services/a/uid/000000100ee688ee?hl=en"
+          name: "Certification",
+          url: ""
+        }
+      ]
+    },
+    {
+      title: "DECA Marketing Communications State Finalist, District Winner",
+      subtitle:
+        "After competing against nearly 120+ other people in Marketing Communication series, a competition consisting of a a 10 minute in-person roleplay and a comprehensive marketing core examination, encompassing content from all avenues within the marketing and business field, I was one of the few state finalists for Marketing Communications, one of the most competitive events in DECA.",
+      image: require("./assets/images/deca.jpg"),
+      imageAlt: "DECA Logo",
+      footerLink: [
+        {
+          name: "The Event",
+          url: "https://www.deca.org/compete/marketing-communications-series"
         }
       ]
     },
 
     {
-      title: "PWA Web App Developer",
-      subtitle: "Completed Certifcation from SMIT for PWA Web App Development",
-      image: require("./assets/images/pwaLogo.webp"),
-      imageAlt: "PWA Logo",
+      title: "Web Developer",
+      subtitle: "Certified through University of Michigan (a T10 University)'s Web Dev specialization; covers how to write syntactically correct HTML5 and CSS3, and how to create interactive web experiences with JavaScript, allowing to develop high quality web sites that, work seamlessly on mobile, tablet, and large screen browsers accessible.",
+      image: require("./assets/images/umich.png"),
+      imageAlt: "Umich Logo",
       footerLink: [
-        {name: "Certification", url: ""},
-        {
-          name: "Final Project",
-          url: "https://pakistan-olx-1.firebaseapp.com/"
-        }
+        {name: "Certification", url: "https://drive.google.com/file/d/1gY66Wu_6IgHmykl_UOT9t2rsJpl2HnxO/view"}
+      ]
+    },
+    {
+      title: "T20 World Cup Intern/Volunteer",
+      subtitle: "Was selected to take part in the development of the T20 Cricket World Cup Matches in Dallas. Spent 6+ hours training, 30+ hours volunteering, as a token of hardwork, got to see USA vs Canada, USA vs Pakistan, Bangladesh vs Srilanka without any cost.",
+      image: require("./assets/images/t20.png"),
+      imageAlt: "ICC Logo",
+      footerLink: [
+        {name: "Badge", url: "https://www.credly.com/badges/3549a344-373a-4278-abdf-ee2e79b4e5e9/linked_in_profile"}
       ]
     }
   ],
@@ -324,7 +310,7 @@ const blogSection = {
         "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Talks Sections
@@ -343,7 +329,7 @@ const talkSection = {
       event_url: "https://www.facebook.com/events/2339906106275053/"
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Podcast Section
@@ -356,7 +342,7 @@ const podcastSection = {
   podcast: [
     "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Resume Section
@@ -372,15 +358,15 @@ const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle:
     "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+92-0000000000",
-  email_address: "saadpasta70@gmail.com"
+  Linkedin: "https://www.linkedin.com/in/aditi-chhawacharia/",
+  email_address: "chhawacharia.aditi@gmail.com"
 };
 
 // Twitter Section
 
 const twitterDetails = {
   userName: "twitter", //Replace "twitter" with your twitter username without @
-  display: true // Set true to display this section, defaults to false
+  display: false // Set true to display this section, defaults to false
 };
 
 const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
