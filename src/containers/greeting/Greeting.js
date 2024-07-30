@@ -45,14 +45,6 @@ export default function Greeting() {
           </div>
           <div className="greeting-image-div" style={{ flex: 1, display: "flex", justifyContent: "center", alignItems: "center", marginTop: "2rem", marginLeft: "2rem" }}>
             <img
-              alt="picture of me"
-              src={require("../../assets/images/icon.png")}
-              style={{
-                width: "25rem", // Adjust the size as needed
-                height: "25rem", // Ensure height matches width for a circle
-                borderRadius: "50%", // Makes the image circular
-                objectFit: "cover", // Ensures the image covers the circle
-              }}
             />
           </div>
         </div>
