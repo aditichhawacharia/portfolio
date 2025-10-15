@@ -23,7 +23,7 @@ const greeting = {
   username: "Aditi Chhawacharia",
   title: "Hi, I'm Aditi",
   subTitle: emoji(
-    "High school junior interested in Computer Science, AI, & Entrepreneurship 🚀"
+    "High school Senior interested in Computer Science 🚀"
   ),
   resumeLink:
     "empty", // Set to empty to hide the button
