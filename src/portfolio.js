@@ -23,7 +23,7 @@ const greeting = {
   username: "Aditi Chhawacharia",
   title: "Hi, I'm Aditi",
   subTitle: emoji(
-    "High school Senior interested in Computer Science 🚀"
+    "High school Senior passionate about AI, cybersecurity, and using technology for social impact 🚀"
   ),
   resumeLink:
     "empty", // Set to empty to hide the button
@@ -43,14 +43,17 @@ const socialMediaLinks = {
 // Skills Section
 const skillsSection = {
   title: "What I do",
-  subTitle: "Programmer. Innovator. Content Creator",
+  subTitle: "AI Researcher. Full-Stack Developer. Social Impact Technologist",
   skills: [
     emoji(
-      "⚡ Skilled in Java, Python, JavaScript, HTML, CSS. Experience with complex problem-solving and developing innovative solutions."
+      "⚡ Building AI governance frameworks and conducting research at NeurIPS and UC Berkeley AI Safety Initiative"
     ),
-    emoji("⚡ Experience in video editing, marketing strategies, audience engagement and creating engaging content across platforms."),
+    emoji("⚡ Developing full-stack applications with React Native, Python, and machine learning to solve real-world problems"),
     emoji(
-      "⚡Passionate about building new ventures and exploring entrepreneurial opportunities."
+      "⚡ Creating educational platforms that have reached 5,000+ students across 52+ countries"
+    ),
+    emoji(
+      "⚡ Leading civic technology initiatives and empowering youth voice in municipal government decisions"
     )
   ],
 
@@ -70,38 +73,34 @@ https://fontawesome.com/icons?d=gallery */
       skillName: "JavaScript",
       fontAwesomeClassname: "fab fa-js"
     },
-   //{
-    //  skillName: "sql-database",
-    //  fontAwesomeClassname: "fas fa-database"
-    //},
+    {
+      skillName: "React",
+      fontAwesomeClassname: "fab fa-react"
+    },
     {
       skillName: "python",
       fontAwesomeClassname: "fab fa-python"
     },
     {
-      skillName:"java",
-      fontAwesomeClassname:"fab fa-java"
+      skillName: "java",
+      fontAwesomeClassname: "fab fa-java"
     },
     {
-      skillName:"leadership",
-      fontAwesomeClassname:"fas fa-users"
+      skillName: "AI/ML",
+      fontAwesomeClassname: "fas fa-brain"
     },
     {
-      skillName:"marketing",
-      fontAwesomeClassname:"fas fa-chart-line"
+      skillName: "leadership",
+      fontAwesomeClassname: "fas fa-users"
     },
     {
-      skillName:"entrepreneurship",
-      fontAwesomeClassname:"fas fa-lightbulb"
-    },
-    {
-      skillName: "content creation",
-      fontAwesomeClassname: "fab fa-youtube"
+      skillName: "research",
+      fontAwesomeClassname: "fas fa-flask"
     }
-
   ],
   display: true // Set false to hide this section, defaults to true
 };
+
 // Education Section
 
 const educationInfo = {
@@ -112,12 +111,15 @@ const educationInfo = {
       logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqfaRsio9nN7qM62jUHUVPydAKdDzvCmkVAg&s",
       subHeader: "High School Diploma",
       duration: "Aug 2023-May 2026",
-      desc: "Grade 11",
-      descBullets:["Notable Coursework: AP Computer Science A(5), AP Calculus AB(4), AP Calculus BC, Computer Science 3",
-         "President of Girls Who Code WG Chapter, VP of French National Honor Society"]
+      desc: "Grade 12 - Senior",
+      descBullets: [
+        "Notable Coursework: AP Computer Science A(5), AP Calculus AB(4), AP Calculus BC, Computer Science 3",
+        "President of Girls Who Code & National Technical Honor Society, VP of French National Honor Society"
+      ]
     }
   ]
 };
+
 // Your top 3 proficient stacks/tech experience
 
 const techStack = {
@@ -129,11 +131,11 @@ const techStack = {
     },
     {
       Stack: "Backend",
-      progressPercentage: "70%"
+      progressPercentage: "80%"
     },
     {
-      Stack: "Programming",
-      progressPercentage: "60%"
+      Stack: "AI/ML",
+      progressPercentage: "85%"
     }
   ],
   displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
@@ -145,34 +147,72 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Software Engineering Fellow",
-      company: "Headstarter AI",
-      companylogo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzkUdlMvs2RawuH6V3YyKb9mrPFaPGbHqO3Q&s",
-      date: "July 2024 – Present",
+      role: "AI Governance Researcher & Presenter",
+      company: "NeurIPS 2025",
+      companylogo: require("./assets/images/neurips.avif"),
+      date: "2024 – Present",
       descBullets: [
-        "Building 5+ AI Apps and APIs using Nextjs, OpenAI, Pinecone, StripeAPI with 98% accuracy as seen by 1000 users",
-        "Developing projects from design to deployment leading 4+ engineering fellows using MVC design patterns",
-        "Coaching by Amazon, Bloomberg and Capital One engineers on Agile, CI/CD, Git and microservice patterns"
+        "Co-authored peer-reviewed research paper on Multi-Stakeholder Framework for Language Model Governance",
+        "Developed novel quantitative risk assessment metrics for AI systems protecting democratic institutions",
+        "Selected to present findings at NeurIPS 2025 in California among leading AI policy researchers"
       ]
     },
     {
-      role: "Founder, Chief Executive Officer, Tech Instructor & Director",
-      company: "TechFirst",
-      companylogo: require("./assets/images/logo5.png"),
-      date: "May 2024 – Present",
-      desc: "TechFirst is an organization providing virtual coding bootcamps (breaking down high level concepts) promoting tech exposure and skills to youth worldwide.",
+      role: "Research Assistant to Dr. Yi Ding",
+      company: "UT Dallas Human-Centered Cyber Physical Systems Lab",
+      companylogo: require("./assets/images/utd.png"),
+      date: "Summer 2024",
+      desc: "Selected as 1 of 4 high school researchers statewide for advanced machine learning research",
       descBullets: [
-        "Have reached several members of our community through Python Bootcamps and more", 
-        "Lead Instructor and Curriculum Developer, teaching kids through 3 hour classes with Classworks, Homework, Quizzes, and Lecture Notes",
+        "Co-developed multimodal posture detection system combining WiFi RSSI fingerprinting with computer vision",
+        "Built React Native data collection app and decision tree classifier for real-time posture inference",
+        "Co-authoring research paper on multimodal sensing in human posture recognition"
       ]
     },
     {
-      role: "Co-Founder and Chief Technology Officer",
-      company: "Operation Nexus",
-      companylogo: require("./assets/images/op2.jpg"),
-      date: "November 2023 – Present",
-      desc: "International Marketing and Web Development Agency.",
-      descBullets:["Operation Nexus has experience with 35+ clients, reached 60K+ accounts, 150K+ media impressions", "Co-leads an cabinet of 13+ professionals","Holds oversight of all technological aspects within the agency"]
+      role: "Founder & Team Lead",
+      company: "McKinney Tech and Data Youth Council",
+      companylogo: require("./assets/images/mckinney.jpg"),
+      date: "2024 – Present",
+      desc: "Founded Texas's first student-led municipal technology advisory board partnering with city government",
+      descBullets: [
+        "Led team building full-stack applications improving public services for McKinney's 200,000+ residents",
+        "Developed McKinney Minutes app with fine-tuned LLM to increase civic information accessibility",
+        "Established recruitment pipeline and presented technology proposals to city leadership"
+      ]
+    },
+    {
+      role: "AI Policy Fellow",
+      company: "UC Berkeley (BASIS)",
+      companylogo: require("./assets/images/berkeley.png"),
+      date: "2025 – Present",
+      desc: "Selected as 1 of 2 high school fellows among 17 participants (10% acceptance rate).",
+      descBullets: [
+        "Co-authored mock California AI & Innovation Safety Act proposing evidence-based AI safety regulations.",
+        "Led AI governance debates and discussed AI Policy research",
+      ]
+    },
+    {
+      role: "Founder & Developer",
+      company: "CyberBear.app",
+      companylogo: require("./assets/images/cyberbear.jpg"),
+      date: "2022 – Present",
+      desc: "Gamified educational platform teaching cybersecurity and digital safety to youth worldwide",
+      descBullets: [
+        "Educated 5,000+ students from 52+ countries using custom-built platform with AI chatbot",
+        "Partnered with 3+ NGOs educating 1,000+ rescued child laborers in India on digital safety",
+        "Collaborating with Prosper ISD to adapt CyberBear for neurodivergent students district-wide"
+      ]
+    },
+    {
+      role: "Programming Instructor",
+      company: "Best Brains Learning Center",
+      companylogo: require("./assets/images/bestbrains.png"),
+      date: "2024 – Present",
+      descBullets: [
+        "Teaching 35+ students (K-8th grade) programming fundamentals in Scratch and Python",
+        "Led 30+ coding projects covering conditionals, loops, functions, and game development"
+      ]
     }
   ]
 };
@@ -188,29 +228,38 @@ const openSource = {
 // Some big projects you have worked on
 
 const bigProjects = {
-  title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES I WORKED ON",
+  title: "Featured Projects",
+  subtitle: "IMPACTFUL PLATFORMS AND APPLICATIONS I'VE BUILT",
   projects: [
     {
+      image: require("./assets/images/cyberbear.png"),
+      projectName: "CyberBear.app",
+      projectDesc: "Gamified platform educating 5,000+ students across 52+ countries on cybersecurity. Partnering with Prosper ISD for district-wide implementation.",
+      footerLink: [
+      ]
+    },
+    {
+      image: require("./assets/images/mckinney.jpg"),
+      projectName: "McKinney Minutes",
+      projectDesc: "Mobile app with fine-tuned LLM summarizing City Council meetings. Officially being implemented by McKinney city government.",
+      footerLink: [
+      ]
+    },
+    {
+      image: require("./assets/images/teatime.jpg"),
+      projectName: "TeaTime AI",
+      projectDesc: "Communication analysis app using OCR and NLP to help Gen-Z navigate social situations.",
+      footerLink: [
+      ]
+    },
+    {
       image: require("./assets/images/3ftl.jpg"),
-      projectName: "3FTL",
-      projectDesc: "Solely designed and developed 3FTL's website. 3FTL is a mental health service for first-responders.",
+      projectName: "3FTL Mental Health Platform",
+      projectDesc: "Full-stack website providing mental health resources for firefighters with PTSD. Reached 6,000+ users and 19,000+ visits.",
       footerLink: [
         {
           name: "Visit Website",
           url: "https://3ftl.com/"
-        }
-        //  you can add extra buttons here.
-      ]
-    },
-    {
-      image: require("./assets/images/stealth.jpg"),
-      projectName: "Stealth Startup",
-      projectDesc: "CEO and Founder of E-commerce business, reaching 1K+ people",
-      footerLink: [
-        {
-          name: "Contact me for Details",
-          url: "https://www.linkedin.com/in/aditi-chhawacharia/"
         }
       ]
     }
@@ -222,68 +271,80 @@ const bigProjects = {
 // Include certificates, talks etc
 
 const achievementSection = {
-  title: emoji("Achievements And Certifications 🏆 "),
+  title: emoji("Achievements And Recognition 🏆"),
   subtitle:
-    "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !",
+    "Awards, Research, Certifications, and Impactful Work",
 
   achievementsCards: [
     {
-      title: "Python Certified",
+      title: "NCWIT Aspirations in Computing Winner",
       subtitle:
-        "Certified through University of Michigan (T10 CS University)'s Python specialization, a course so rigorous, that it is on the pathway to earn a Masters of Data Science. Covers fundamental concepts of Python including DSA, Networked APIs, Interfaces, Accessing Web Data and Databases",
-      image: require("./assets/images/umich.png"),
-      imageAlt: "Google Code-In Logo",
+        "Selected as 1 of 13 honorees across Dallas-Fort Worth region for exceptional achievement in computing, leadership, and social impact through technology. Recognized by Bank of America.",
+      image: require("./assets/images/ncwit.png"),
+      imageAlt: "NCWIT Logo",
       footerLink: [
-        {
-          name: "Certification",
-          url: "https://drive.google.com/file/d/1XvXhpRXKGhHGSb81akQ_sSRACAhjmsmZ/view"
-        }
       ]
+    },
+    {
+      title: "NeurIPS 2025 Research Paper",
+      subtitle:
+        "Co-authored peer-reviewed paper 'A Multi-Stakeholder Framework for Language Model Governance' accepted to NeurIPS Algorithmic Collective Action Workshop. Presenting in California.",
+      image: require("./assets/images/neurips.avif"),
+      imageAlt: "NeurIPS Logo",
+      footerLink: [
+      ]
+    },
+    {
+      title: "CodeWars Top 1%",
+      subtitle:
+        "Ranked in top 1% out of 3,000,000 coders globally. Solved 100+ algorithmic challenges covering advanced data structures and algorithms.",
+      image: require("./assets/images/codewars.png"),
+      imageAlt: "CodeWars Logo",
+      footerLink: [
+      ]
+    },
+    {
+      title: "DECA International Grand Finalist",
+      subtitle:
+        "International Grand Finalist (Top 20 Awardee) in Marketing Communications at ICDC. 2x State Winner and 3x Regional Champion competing against 120+ participants.",
+      image: require("./assets/images/deca.jpg"),
+      imageAlt: "DECA Logo",
+      footerLink: [
+      ]
+    },
+    {
+      title: "Google & FemalesinTech Scholarship",
+      subtitle:
+        "Awarded full-ride scholarship to complete Google's 6-course Data Analytics and Machine Learning Professional Certificate through Grow With Google program.",
+      image: require("./assets/images/google.jpg"),
+      imageAlt: "Google Logo",
+      footerLink: [
+      ]
+    },
+    {
+      title: "Hackathon Winner (2x)",
+      subtitle:
+        "1st Place at TechPals Code for Change Hackathon (SunSense app) and Advanced Knowledge Tech LLC x CSC Hackathon (Pennywise app) - both with 100+ global participants.",
+      image: require("./assets/images/hackathon.jpg"),
+      imageAlt: "Hackathon Logo",
+      footerLink: []
     },
     {
       title: "IBM AI Professional Developer",
       subtitle:
-        "Certified through IBM's AI Professional Developer Specialization. Learnt the fundamental concepts, key terms, building blocks, and applications of AI, how to use Python and Flask to develop and deploy AI applications on the web, and how to build generative AI-powered apps and chatbots using various frameworks and technologies.",
+        "Certified through IBM's AI Professional Developer Specialization covering Python, Flask, generative AI-powered apps, chatbots, and web deployment of AI applications.",
       image: require("./assets/images/ibm.png"),
       imageAlt: "IBM Logo",
       footerLink: [
-        {
-          name: "Certification",
-          url: "https://www.credly.com/earner/earned/badge/e9096499-e48c-4fe3-886b-6bdd42a36f85"
-        }
       ]
     },
     {
-      title: "DECA Marketing Communications State Finalist, District Winner",
+      title: "Inspiring Teen Magazine Honoree",
       subtitle:
-        "After competing against nearly 120+ other people in Marketing Communication series, a competition consisting of a a 10 minute in-person roleplay and a comprehensive marketing core examination, encompassing content from all avenues within the marketing and business field, I was one of the few state finalists for Marketing Communications, one of the most competitive events in DECA.",
-      image: require("./assets/images/deca.jpg"),
-      imageAlt: "DECA Logo",
-      footerLink: [
-        {
-          name: "The Event",
-          url: "https://www.deca.org/compete/marketing-communications-series"
-        }
-      ]
-    },
-
-    {
-      title: "Web Developer",
-      subtitle: "Certified through University of Michigan (a T10 University)'s Web Dev specialization; covers how to write syntactically correct HTML5 and CSS3, and how to create interactive web experiences with JavaScript, allowing to develop high quality web sites that, work seamlessly on mobile, tablet, and large screen browsers accessible.",
-      image: require("./assets/images/umich.png"),
-      imageAlt: "Umich Logo",
-      footerLink: [
-        {name: "Certification", url: "https://drive.google.com/file/d/1gY66Wu_6IgHmykl_UOT9t2rsJpl2HnxO/view"}
-      ]
-    },
-    {
-      title: "T20 World Cup Intern/Volunteer",
-      subtitle: "Was selected to take part in the development of the T20 Cricket World Cup Matches in Dallas. Spent 6+ hours training, 30+ hours volunteering, as a token of hardwork, got to see USA vs Canada, USA vs Pakistan, Bangladesh vs Srilanka.",
-      image: require("./assets/images/t20.png"),
-      imageAlt: "ICC Logo",
-      footerLink: [
-        {name: "Badge", url: "https://www.credly.com/badges/3549a344-373a-4278-abdf-ee2e79b4e5e9/linked_in_profile"}
-      ]
+        "Featured nationally for exemplary leadership in technology and community impact, highlighting work with CyberBear and civic technology initiatives.",
+      image: require("./assets/images/inspiringteens.jpg"),
+      imageAlt: "Magazine Logo",
+      footerLink: []
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -296,20 +357,7 @@ const blogSection = {
   subtitle:
     "With Love for Developing cool stuff, I love to write and teach others what I have learnt.",
   displayMediumBlogs: "true", // Set true to display fetched medium blogs instead of hardcoded ones
-  blogs: [
-    {
-      url: "https://blog.usejournal.com/create-a-google-assistant-action-and-win-a-google-t-shirt-and-cloud-credits-4a8d86d76eae",
-      title: "Win a Google Assistant Tshirt and $200 in Google Cloud Credits",
-      description:
-        "Do you want to win $200 and Google Assistant Tshirt by creating a Google Assistant Action in less then 30 min?"
-    },
-    {
-      url: "https://medium.com/@saadpasta/why-react-is-the-best-5a97563f423e",
-      title: "Why REACT is The Best?",
-      description:
-        "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
-    }
-  ],
+  blogs: [],
   display: false // Set false to hide this section, defaults to true
 };
 
@@ -320,15 +368,7 @@ const talkSection = {
   subtitle: emoji(
     "I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅"
   ),
-
-  talks: [
-    {
-      title: "Build Actions For Google Assistant",
-      subtitle: "Codelab at GDG DevFest Karachi 2019",
-      slides_url: "https://bit.ly/saadpasta-slides",
-      event_url: "https://www.facebook.com/events/2339906106275053/"
-    }
-  ],
+  talks: [],
   display: false // Set false to hide this section, defaults to true
 };
 
@@ -337,11 +377,7 @@ const talkSection = {
 const podcastSection = {
   title: emoji("Podcast 🎙️"),
   subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
-
-  // Please Provide with Your Podcast embeded Link
-  podcast: [
-    "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
-  ],
+  podcast: [],
   display: false // Set false to hide this section, defaults to true
 };
 
@@ -349,8 +385,6 @@ const podcastSection = {
 const resumeSection = {
   title: "Resume",
   subtitle: "Feel free to download my resume",
-
-  // Please Provide with Your Podcast embeded Link
   display: true // Set false to hide this section, defaults to true
 };
 
@@ -369,7 +403,7 @@ const twitterDetails = {
   display: false // Set true to display this section, defaults to false
 };
 
-const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
+const isHireable = true; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
 
 export {
   illustration,
