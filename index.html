@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditi Chhawacharia | AI Researcher & Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --black: #000000;
+            --white: #FFFFFF;
+            --gray: #808080;
+            --light-gray: #F5F5F5;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--white);
+            color: var(--black);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--white);
+            z-index: 1000;
+            padding: 25px 0;
+            border-bottom: 2px solid var(--black);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--black);
+            letter-spacing: -1px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        nav a {
+            color: var(--black);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.6;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 100px;
+            background: var(--light-gray);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -2px;
+        }
+
+        .hero-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-weight: 400;
+            color: var(--gray);
+        }
+
+        .hero-content p {
+            font-size: 1rem;
+            margin-bottom: 30px;
+            line-height: 1.7;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 350px;
+            background: var(--black);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 18px 40px;
+            border: 2px solid var(--black);
+            background: transparent;
+            color: var(--black);
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .btn-primary {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--black);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: -1px;
+        }
+
+        .section-subtitle {
+            font-size: 1rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Gallery Carousel */
+        .gallery-section {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .gallery-section .section-title,
+        .gallery-section .section-subtitle {
+            color: var(--white);
+        }
+
+        .carousel-container {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .carousel {
+            overflow: hidden;
+            border: 3px solid var(--white);
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .carousel-image {
+            width: 100%;
+            height: 320px;
+            background: var(--gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+
+        .carousel-caption {
+            padding: 30px;
+            background: var(--white);
+            color: var(--black);
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .carousel-caption h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            margin-top: 0;
+            font-weight: 700;
+        }
+
+        .carousel-caption p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--white);
+            color: var(--black);
+            border: none;
+            width: 60px;
+            height: 60px;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: opacity 0.3s;
+            z-index: 10;
+        }
+
+        .carousel-arrow:hover {
+            opacity: 0.7;
+        }
+
+        .carousel-arrow.prev {
+            left: -80px;
+        }
+
+        .carousel-arrow.next {
+            right: -80px;
+        }
+
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            background: var(--gray);
+            border: 2px solid var(--white);
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .dot.active {
+            background: var(--white);
+        }
+
+        /* Experience Grid */
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .exp-card {
+            border: 2px solid var(--black);
+            padding: 0;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .exp-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .exp-image {
+            width: 100%;
+            height: 140px;
+            background: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid var(--black);
+        }
+
+        .exp-image img {
+            max-width: 80%;
+            max-height: 80%;
+            object-fit: contain;
+        }
+
+        .exp-content {
+            padding: 20px;
+        }
+
+        .exp-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .exp-company {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-bottom: 12px;
+        }
+
+        .exp-bullets {
+            list-style: none;
+            margin-top: 12px;
+        }
+
+        .exp-bullets li {
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+            font-size: 0.85rem;
+        }
+
+        .exp-bullets li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            font-weight: 700;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .project-card {
+            border: 2px solid var(--black);
+            overflow: hidden;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 160px;
+            background: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid var(--black);
+            font-size: 1rem;
+            color: var(--gray);
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 18px;
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .project-desc {
+            font-size: 0.85rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .project-link {
+            display: inline-block;
+            padding: 8px 20px;
+            border: 2px solid var(--black);
+            text-decoration: none;
+            color: var(--black);
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+        }
+
+        .project-link:hover {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        /* Achievements Grid */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+
+        .achievement-card {
+            border: 2px solid var(--black);
+            padding: 30px 20px;
+            text-align: center;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .achievement-card:hover {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .achievement-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--black);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--white);
+        }
+
+        .achievement-card:hover .achievement-icon {
+            background: var(--white);
+            color: var(--black);
+        }
+
+        .achievement-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .achievement-desc {
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--light-gray);
+            text-align: center;
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-content h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .contact-content p {
+            font-size: 1rem;
+            margin-bottom: 40px;
+            line-height: 1.7;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            padding: 20px 40px;
+            border: 2px solid var(--black);
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--black);
+            color: var(--white);
+            text-align: center;
+            padding: 50px;
+            font-size: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .carousel-arrow.prev {
+                left: 10px;
+            }
+            .carousel-arrow.next {
+                right: 10px;
+            }
+            .experience-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .achievements-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 968px) {
+            .hero-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .achievements-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                gap: 20px;
+            }
+
+            nav a {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .experience-grid,
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">ADITI CHHAWACHARIA</div>
+            <ul>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#experience">EXPERIENCE</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#achievements">AWARDS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <h1>AI RESEARCHER & DEVELOPER</h1>
+                    <h2>Building Technology for Social Impact</h2>
+                    <p>High school senior conducting AI governance research at NeurIPS and UC Berkeley, developing civic technology platforms, and creating educational tools that reach thousands globally.</p>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="btn btn-primary">GET IN TOUCH</a>
+                        <a href="#gallery" class="btn">VIEW GALLERY</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    [Your Professional Photo Here]
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">WORK GALLERY</h2>
+                <p class="section-subtitle">A visual journey through my projects, research, and impact</p>
+            </div>
+            
+            <div class="carousel-container">
+                <button class="carousel-arrow prev" onclick="moveSlide(-1)">‹</button>
+                <button class="carousel-arrow next" onclick="moveSlide(1)">›</button>
+                
+                <div class="carousel">
+                    <div class="carousel-track" id="carouselTrack">
+                        <div class="carousel-slide">
+                            <div class="carousel-image">[NeurIPS Research Presentation Photo]</div>
+                            <div class="carousel-caption">
+                                <h3>NeurIPS 2025 AI Governance Research</h3>
+                                <p>Co-authored peer-reviewed paper on Multi-Stakeholder Framework for Language Model Governance, presenting at one of the world's premier AI conferences. Developed quantitative risk assessment metrics for AI systems protecting democratic institutions.</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <div class="carousel-image">[UC Berkeley Fellowship Photo]</div>
+                            <div class="carousel-caption">
+                                <h3>UC Berkeley AI Policy Fellowship</h3>
+                                <p>Selected as 1 of 2 high school fellows (10% acceptance rate) among 17 participants at UC Berkeley's AI Safety Initiative. Co-authored mock California AI & Innovation Safety Act and led policy debates on AI governance.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-slide">
+                            <div class="carousel-image">[CyberBear Platform Screenshot]</div>
+                            <div class="carousel-caption">
+                                <h3>CyberBear Educational Platform</h3>
+                                <p>Gamified cybersecurity education platform reaching 5,000+ students across 52+ countries. Features custom curriculum, AI chatbot integration, and partnerships with NGOs educating rescued child laborers in India.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-slide">
+                            <div class="carousel-image">[McKinney Youth Council Meeting Photo]</div>
+                            <div class="carousel-caption">
+                                <h3>McKinney Tech Youth Council</h3>
+                                <p>Founded Texas's first student-led municipal technology advisory board. Presenting technology proposals to McKinney city leadership to improve public services for 200,000+ residents through civic technology innovation.</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <div class="carousel-image">[UT Dallas Research Photo]</div>
+                            <div class="carousel-caption">
+                                <h3>UT Dallas Cyber Physical Systems Research</h3>
+                                <p>Selected as 1 of 4 high school researchers statewide for prestigious summer research position. Developed multimodal posture detection system and built React Native data collection application.</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <div class="carousel-image">[Project Ruby Photo]</div>
+                            <div class="carousel-caption">
+                                <h3>Project Ruby Mentorship Program</h3>
+                                <p>Founded 501(c)(3) nonprofit addressing the leadership gap where only 10.6% of Fortune 500 executives are female. Guided 100+ girls in initiatives impacting 8,000+ people and connected 1,000+ girls to opportunities.</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <div class="carousel-image">[Girls Who Code / Book Photo]</div>
+                            <div class="carousel-caption">
+                                <h3>Girls Who Code & STEMAventure Book</h3>
+                                <p>Three-year president of Girls Who Code chapter with 50+ members. Led authorship and publication of "Maddie's STEMAventure," a girls-in-STEM book now distributed in schools with biweekly coding workshops.</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <div class="carousel-image">[NCWIT Award Ceremony Photo]</div>
+                            <div class="carousel-caption">
+                                <h3>NCWIT Aspirations in Computing Award</h3>
+                                <p>Selected as 1 of 13 honorees across Dallas-Fort Worth region. Recognized by Bank of America for exceptional achievement in computing, leadership, and social impact through technology innovation.</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <div class="carousel-image">[Hackathon Photo]</div>
+                            <div class="carousel-caption">
+                                <h3>Hackathon Championship Wins</h3>
+                                <p>Won 1st Place at TechPals Code for Change (SunSense app) and Advanced Knowledge Tech LLC x CSC Hackathon (Pennywise app), competing against 100+ participants from around the world.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-dots" id="carouselDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">EXPERIENCE</h2>
+                <p class="section-subtitle">Research, leadership, and development roles shaping the future of AI and civic technology</p>
+            </div>
+            
+            <div class="experience-grid">
+                <div class="exp-card">
+                    <div class="exp-image">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Tensorflow_logo.svg/1200px-Tensorflow_logo.svg.png" alt="NeurIPS">
+                    </div>
+                    <div class="exp-content">
+                        <div class="exp-title">AI Governance Researcher</div>
+                        <div class="exp-company">NeurIPS 2025 • 2024 – Present</div>
+                        <ul class="exp-bullets">
+                            <li>Co-authored peer-reviewed research on Multi-Stakeholder Framework for Language Model Governance</li>
+                            <li>Developed quantitative risk assessment metrics for AI systems protecting democratic institutions</li>
+                            <li>Selected to present at NeurIPS 2025 in California</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="exp-card">
+                    <div class="exp-image">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Seal_of_University_of_California%2C_Berkeley.svg/1200px-Seal_of_University_of_California%2C_Berkeley.svg.png" alt="UC Berkeley">
+                    </div>
+                    <div class="exp-content">
+                        <div class="exp-title">AI Policy Fellow</div>
+                        <div class="exp-company">UC Berkeley AI Safety Initiative • 2025 – Present</div>
+                        <ul class="exp-bullets">
+                            <li>Selected as 1 of 2 high school fellows (10% acceptance rate)</li>
+                            <li>Co-authored mock California AI & Innovation Safety Act</li>
+                            <li>Led AI governance policy debates and research discussions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="exp-card">
+                    <div class="exp-image">
+                        [CyberBear Logo]
+                    </div>
+                    <div class="exp-content">
+                        <div class="exp-title">Founder & Developer</div>
+                        <div class="exp-company">CyberBear.app • 2022 – Present</div>
+                        <ul class="exp-bullets">
+                            <li>Educated 5,000+ students from 52+ countries on cybersecurity</li>
+                            <li>Partnered with NGOs to reach 1,000+ rescued child laborers</li>
+                            <li>Collaborating with Prosper ISD for district-wide implementation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="exp-card">
+                    <div class="exp-image">
+                        [McKinney City Logo]
+                    </div>
+                    <div class="exp-content">
+                        <div class="exp-title">Founder & Team Lead</div>
+                        <div class="exp-company">McKinney Tech Youth Council • 2024 – Present</div>
+                        <ul class="exp-bullets">
+                            <li>Founded Texas's first student-led municipal technology advisory board</li>
+                            <li>Built full-stack applications for 200,000+ residents</li>
+                            <li>Developed McKinney Minutes app with fine-tuned LLM</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="exp-card">
+                    <div class="exp-image">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e6/University_of_Texas_at_Dallas_seal.svg/1200px-University_of_Texas_at_Dallas_seal.svg.png" alt="UT Dallas">
+                    </div>
+                    <div class="exp-content">
+                        <div class="exp-title">Research Assistant</div>
+                        <div class="exp-company">UT Dallas Cyber Physical Systems Lab • Summer 2024</div>
+                        <ul class="exp-bullets">
+                            <li>Selected as 1 of 4 high school researchers statewide</li>
+                            <li>Developed multimodal posture detection system</li>
+                            <li>Built React Native data collection app</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="exp-card">
+                    <div class="exp-image">
+                        [Project Ruby Logo]
+                    </div>
+                    <div class="exp-content">
+                        <div class="exp-title">Founder & Executive Director</div>
+                        <div class="exp-company">Project Ruby Mentorship Program (501c3) • Sep 2024 – Present</div>
+                        <ul class="exp-bullets">
+                            <li>Founded 501(c)(3) nonprofit to close leadership gap (only 10.6% Fortune 500 execs are female)</li>
+                            <li>Guided 100+ girls in initiatives impacting 8,000+ people</li>
+                            <li>Designed and coded website connecting 1,000+ girls to educational and career opportunities</li>
+                            <li>Produced leadership media reaching 18,000+ students</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="exp-card">
+                    <div class="exp-image">
+                        <img src="https://media.licdn.com/dms/image/v2/D560BAQHWQvRq6b0wYA/company-logo_200_200/company-logo_200_200/0/1718037984419/girls_who_code_logo?e=2147483647&v=beta&t=8kXyxOZFBWwBLKT5dGKZi1EKdPPzJLLCjNyBWpGZqpE" alt="Girls Who Code">
+                    </div>
+                    <div class="exp-content">
+                        <div class="exp-title">President @ Walnut Grove</div>
+                        <div class="exp-company">Girls Who Code • Aug 2023 – Present</div>
+                        <ul class="exp-bullets">
+                            <li>Led community of 50+ girls in technology and STEM for 3 years</li>
+                            <li>Spearheaded authorship and publication of "Maddie's STEMAventure" book distributed in schools</li>
+                            <li>Organized biweekly coding workshops and guest speaker sessions</li>
+                            <li>Fostered mentorship and exposure to diverse STEM careers</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="exp-card">
+                    <div class="exp-image">
+                        [Best Brains Logo]
+                    </div>
+                    <div class="exp-content">
+                        <div class="exp-title">Programming Instructor</div>
+                        <div class="exp-company">Best Brains Learning Center • 2024 – Present</div>
+                        <ul class="exp-bullets">
+                            <li>Teaching 35+ students (K-8th grade) programming fundamentals</li>
+                            <li>Led 30+ coding projects in Scratch and Python</li>
+                            <li>Covering conditionals, loops, functions, and game development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">FEATURED PROJECTS</h2>
+                <p class="section-subtitle">Impactful platforms and applications solving real-world problems</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">[Project Ruby Website Screenshot]</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Project Ruby Platform</h3>
+                        <p class="project-desc">Full-stack nonprofit website connecting 1,000+ girls to educational and career opportunities. Features mentorship matching, leadership resources, and media content that has reached 18,000+ students. Founded as a 501(c)(3) to address the leadership gap in corporate America.</p>
+                        <a href="#" class="project-link">VIEW PROJECT →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">[McKinney Minutes App Screenshot]</div>
+                    <div class="project-content">
+                        <h3 class="project-title">McKinney Minutes</h3>
+                        <p class="project-desc">Mobile application with fine-tuned LLM that summarizes City Council meetings. Officially implemented by McKinney city government to increase civic engagement and information accessibility for 200,000+ residents.</p>
+                        <a href="#" class="project-link">VIEW PROJECT →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">[CyberBear Platform Screenshot]</div>
+                    <div class="project-content">
+                        <h3 class="project-title">CyberBear Platform</h3>
+                        <p class="project-desc">Gamified educational platform teaching cybersecurity to youth worldwide. Reached 5,000+ students across 52+ countries with custom-built curriculum, AI chatbot integration, and partnerships with international NGOs.</p>
+                        <a href="#" class="project-link">VIEW PROJECT →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">[TeaTime AI Screenshot]</div>
+                    <div class="project-content">
+                        <h3 class="project-title">TeaTime AI</h3>
+                        <p class="project-desc">Communication analysis application using OCR and NLP to help Gen-Z navigate complex social situations. Features real-time text analysis and contextual suggestions powered by machine learning.</p>
+                        <a href="#" class="project-link">VIEW PROJECT →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">[3FTL Website Screenshot]</div>
+                    <div class="project-content">
+                        <h3 class="project-title">3FTL Mental Health Platform</h3>
+                        <p class="project-desc">Full-stack website providing mental health resources for firefighters with PTSD. Reached 6,000+ users and 19,000+ visits with comprehensive support materials, crisis resources, and community connection tools.</p>
+                        <a href="https://3ftl.com/" class="project-link" target="_blank">VIEW PROJECT →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">RECOGNITION</h2>
+                <p class="section-subtitle">Awards and achievements recognizing impact in AI, technology, and social good</p>
+            </div>
+            
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">🏆</div>
+                    <div class="achievement-title">NCWIT Aspirations Winner</div>
+                    <div class="achievement-desc">1 of 13 honorees across DFW for computing and social impact</div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">📄</div>
+                    <div class="achievement-title">NeurIPS 2025 Publication</div>
+                    <div class="achievement-desc">Co-authored research on AI governance frameworks</div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">💻</div>
+                    <div class="achievement-title">CodeWars Top 1%</div>
+                    <div class="achievement-desc">Top 1% of 3M+ coders globally</div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">🎯</div>
+                    <div class="achievement-title">DECA Grand Finalist</div>
+                    <div class="achievement-desc">Top 20 internationally, 2x State Winner</div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">🎓</div>
+                    <div class="achievement-title">Google Scholarship</div>
+                    <div class="achievement-desc">Full-ride for Google Data Analytics & ML Certificate</div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">🚀</div>
+                    <div class="achievement-title">Hackathon Winner (2x)</div>
+                    <div class="achievement-desc">1st Place at two major hackathons (100+ participants)</div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">🤖</div>
+                    <div class="achievement-title">IBM AI Developer</div>
+                    <div class="achievement-desc">Certified AI Professional Developer Specialization</div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">📰</div>
+                    <div class="achievement-title">Inspiring Teen Honoree</div>
+                    <div class="achievement-desc">Featured nationally for tech leadership</div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">📚</div>
+                    <div class="achievement-title">AP Scholar</div>
+                    <div class="achievement-desc">AP CS A (5), Calculus AB (4)</div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">🎖️</div>
+                    <div class="achievement-title">Google Data Analytics</div>
+                    <div class="achievement-desc">6-course Professional Certificate</div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">🔬</div>
+                    <div class="achievement-title">AWS ML Foundations</div>
+                    <div class="achievement-desc">Machine Learning certification</div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">⚡</div>
+                    <div class="achievement-title">IBM Generative AI</div>
+                    <div class="achievement-desc">Generative AI Engineering certification</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <h2>LET'S CONNECT</h2>
+                <p>I'm currently exploring opportunities in AI research, software engineering, and civic technology. Whether you want to discuss research collaboration, project opportunities, or just connect — I'd love to hear from you.</p>
+                
+                <div class="cta-buttons">
+                    <a href="mailto:chhawacharia.aditi@gmail.com" class="btn btn-primary">EMAIL ME</a>
+                    <a href="https://www.linkedin.com/in/aditi-chhawacharia/" target="_blank" class="btn">LINKEDIN</a>
+                </div>
+
+                <div class="contact-info">
+                    <div class="contact-item">chhawacharia.aditi@gmail.com</div>
+                    <div class="contact-item">Austin, Texas</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Aditi Chhawacharia. Designed & Built with HTML, CSS, and JavaScript.</p>
+        </div>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const totalSlides = slides.length;
+        const track = document.getElementById('carouselTrack');
+        const dotsContainer = document.getElementById('carouselDots');
+
+        // Create dots
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(i));
+            dotsContainer.appendChild(dot);
+        }
+
+        function updateSlide() {
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            // Update dots
+            document.querySelectorAll('.dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        function moveSlide(direction) {
+            currentSlide += direction;
+            
+            if (currentSlide < 0) {
+                currentSlide = totalSlides - 1;
+            } else if (currentSlide >= totalSlides) {
+                currentSlide = 0;
+            }
+            
+            updateSlide();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlide();
+        }
+
+        // Auto-advance carousel every 5 seconds
+        setInterval(() => {
+            moveSlide(1);
+        }, 5000);
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to nav
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            } else {
+                nav.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
